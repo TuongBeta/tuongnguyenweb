@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tường Nguyễn - Thiết Bị Micro, Soundcard Live Stream</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B00',secondary:'#2563EB'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Roboto', sans-serif;
+}
+.countdown-timer .time-block {
+position: relative;
+}
+.countdown-timer .time-block::after {
+content: ":";
+position: absolute;
+right: -4px;
+top: 50%;
+transform: translateY(-50%);
+font-weight: bold;
+}
+.countdown-timer .time-block:last-child::after {
+content: "";
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+<div class="flex items-center justify-between px-4 py-3">
+<div class="flex items-center">
+<h1 class="text-2xl font-['Pacifico'] text-primary">Tường Nguyễn</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</div>
+<div class="px-4 pb-3">
+<div class="relative">
+<input type="text" placeholder="Tìm kiếm sản phẩm..." class="w-full px-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none">
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-20">
+<!-- Hero Banner -->
+<section class="px-4 mb-6">
+<div class="relative rounded-lg overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Professional%20audio%20equipment%20setup%20with%20microphones%2C%20soundcards%2C%20and%20streaming%20devices%20arranged%20on%20a%20modern%20desk%20with%20soft%20lighting%2C%20high%20quality%20professional%20photography%2C%20isolated%20products&width=800&height=400&seq=1&orientation=landscape" alt="Thiết bị âm thanh chuyên nghiệp" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-center px-6">
+<h2 class="text-white text-xl font-bold mb-2">Thiết Bị Thu Âm Chuyên Nghiệp</h2>
+<p class="text-white text-sm mb-4">Nâng tầm chất lượng âm thanh của bạn</p>
+<button class="bg-primary text-white px-4 py-2 rounded-button w-32 font-medium text-sm cursor-pointer">Mua Ngay</button>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="px-4 mb-8">
+<h2 class="text-lg font-bold mb-4">Danh Mục Sản Phẩm</h2>
+<div class="grid grid-cols-5 gap-3">
+<div class="flex flex-col items-center cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-gray-100 overflow-hidden mb-2">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20professional%20condenser%20microphone%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=100&height=100&seq=2&orientation=squarish" alt="Micro Thu Âm" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center white-space-nowrap overflow-hidden text-overflow-ellipsis">Micro Thu Âm</span>
+</div>
+<div class="flex flex-col items-center cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-gray-100 overflow-hidden mb-2">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20audio%20interface%20soundcard%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=100&height=100&seq=3&orientation=squarish" alt="Soundcard" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center white-space-nowrap overflow-hidden text-overflow-ellipsis">Soundcard</span>
+</div>
+<div class="flex flex-col items-center cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-gray-100 overflow-hidden mb-2">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20streaming%20accessories%20like%20pop%20filter%20and%20microphone%20arm%20stand%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=100&height=100&seq=4&orientation=squarish" alt="Phụ Kiện Live Stream" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center white-space-nowrap overflow-hidden text-overflow-ellipsis">Phụ Kiện Live</span>
+</div>
+<div class="flex flex-col items-center cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-gray-100 overflow-hidden mb-2">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20complete%20audio%20recording%20setup%20with%20microphone%2C%20headphones%2C%20and%20interface%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=100&height=100&seq=5&orientation=squarish" alt="Combo Thiết Bị" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center white-space-nowrap overflow-hidden text-overflow-ellipsis">Combo Thiết Bị</span>
+</div>
+<div class="flex flex-col items-center cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-gray-100 overflow-hidden mb-2">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20audio%20software%20and%20plugins%20interface%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=100&height=100&seq=17&orientation=squarish" alt="Phần Mềm Plugin" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-center white-space-nowrap overflow-hidden text-overflow-ellipsis">Phần Mềm Plugin</span>
+</div>
+</div>
+</section>
+<!-- Flash Sale -->
+<section class="px-4 mb-8">
+<div class="bg-white rounded-lg p-4 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-flashlight-line ri-lg text-primary"></i>
+</div>
+<h2 class="text-lg font-bold">Flash Sale</h2>
+</div>
+<div class="flex items-center countdown-timer">
+<div class="time-block bg-gray-100 rounded px-2 py-1 text-xs font-medium mr-1">12</div>
+<div class="time-block bg-gray-100 rounded px-2 py-1 text-xs font-medium mr-1">45</div>
+<div class="time-block bg-gray-100 rounded px-2 py-1 text-xs font-medium">33</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-gray-50 rounded-lg p-2 cursor-pointer">
+<div class="relative mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20USB%20condenser%20microphone%20with%20shock%20mount%20on%20a%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=6&orientation=squarish" alt="Micro Condenser USB" class="w-full h-32 object-contain">
+<div class="absolute top-0 left-0 bg-primary text-white text-xs px-2 py-1 rounded-br-lg">-30%</div>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Micro Condenser USB BM-800</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm mr-2">890.000₫</span>
+<span class="text-gray-400 text-xs line-through">1.270.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.8 (120)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-2 cursor-pointer">
+<div class="relative mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20audio%20interface%20soundcard%20for%20recording%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=7&orientation=squarish" alt="Soundcard Focusrite" class="w-full h-32 object-contain">
+<div class="absolute top-0 left-0 bg-primary text-white text-xs px-2 py-1 rounded-br-lg">-20%</div>
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Soundcard Focusrite Scarlett Solo</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm mr-2">2.390.000₫</span>
+<span class="text-gray-400 text-xs line-through">2.990.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.9 (86)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-4 mb-8">
+<h2 class="text-lg font-bold mb-4">Sản Phẩm Nổi Bật</h2>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20dynamic%20microphone%20for%20vocal%20recording%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=8&orientation=squarish" alt="Micro Shure SM7B" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Micro Shure SM7B Chuyên Nghiệp</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">6.490.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.9 (215)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20audio%20mixer%20for%20streaming%20and%20recording%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=9&orientation=squarish" alt="Mixer Yamaha MG10XU" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Mixer Yamaha MG10XU</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">3.790.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.8 (178)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headphones%20for%20studio%20monitoring%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=10&orientation=squarish" alt="Tai Nghe Audio-Technica" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Tai Nghe Audio-Technica ATH-M50x</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">3.290.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.7 (156)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20microphone%20arm%20stand%20for%20streaming%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=11&orientation=squarish" alt="Giá Đỡ Micro" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Giá Đỡ Micro Chuyên Nghiệp</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">790.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.6 (92)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20USB%20microphone%20for%20streaming%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=18&orientation=squarish" alt="Micro HyperX QuadCast S" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Micro HyperX QuadCast S RGB</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">4.290.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.8 (145)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20audio%20interface%20for%20streaming%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=19&orientation=squarish" alt="Soundcard GoXLR" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Soundcard TC Helicon GoXLR</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">8.990.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.9 (98)</span>
+</div>
+<button class="bg-primary text-white p-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer">
+<i class="ri-shopping-cart-2-line ri-sm"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<button class="border border-primary text-primary px-4 py-2 rounded-button text-sm font-medium cursor-pointer">Xem Thêm</button>
+</div>
+</section>
+<!-- Promotion Banner -->
+<section class="px-4 mb-8">
+<div class="bg-white rounded-lg overflow-hidden shadow-sm">
+<img src="https://readdy.ai/api/search-image?query=Professional%20streaming%20setup%20with%20microphone%2C%20camera%2C%20and%20lighting%20equipment%2C%20promotional%20banner%20style%2C%20vibrant%20colors%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%2C%20centered%20composition&width=800&height=300&seq=12&orientation=landscape" alt="Khuyến mãi combo thiết bị" class="w-full h-40 object-cover">
+<div class="p-4">
+<h3 class="text-lg font-bold mb-2">Combo Thiết Bị Live Stream Chuyên Nghiệp</h3>
+<p class="text-sm text-gray-600 mb-3">Trọn bộ thiết bị thu âm, live stream chất lượng cao với giá ưu đãi. Tiết kiệm đến 25% so với mua lẻ.</p>
+<div class="flex items-center justify-between">
+<div>
+<span class="text-primary font-bold">4.990.000₫</span>
+<span class="text-gray-400 text-xs line-through ml-2">6.650.000₫</span>
+</div>
+<button class="bg-primary text-white px-4 py-2 rounded-button text-sm font-medium cursor-pointer">Mua Ngay</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers -->
+<section class="px-4 mb-8">
+<h2 class="text-lg font-bold mb-4">Bán Chạy Nhất</h2>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Blue%20Yeti%20USB%20microphone%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=13&orientation=squarish" alt="Micro Blue Yeti" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Micro Blue Yeti USB</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">3.190.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.8 (320)</span>
+</div>
+<div class="text-xs text-gray-500">Đã bán 1.2k</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-2 cursor-pointer">
+<div class="mb-2">
+<img src="https://readdy.ai/api/search-image?query=Rode%20NT-USB%20Mini%20microphone%2C%20simple%20white%20background%2C%20high-quality%20product%20photography%2C%20clear%20lighting%2C%20detailed%20texture%2C%20realistic%2C%20no%20text%20or%20watermarks%2C%20centered%20composition&width=200&height=200&seq=14&orientation=squarish" alt="Micro Rode NT-USB Mini" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-sm font-medium mb-1 line-clamp-2">Micro Rode NT-USB Mini</h3>
+<div class="flex items-center mb-1">
+<span class="text-primary font-bold text-sm">2.790.000₫</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<span class="text-xs ml-1">4.9 (275)</span>
+</div>
+<div class="text-xs text-gray-500">Đã bán 950</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews -->
+<section class="px-4 mb-8">
+<h2 class="text-lg font-bold mb-4">Đánh Giá Từ Khách Hàng</h2>
+<div class="bg-white rounded-lg shadow-sm p-4">
+<div class="mb-4 pb-4 border-b border-gray-100">
+<div class="flex items-start mb-3">
+<div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden mr-3">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20photo%20of%20a%20young%20Vietnamese%20man%2C%20simple%20neutral%20background%2C%20realistic%2C%20high%20quality&width=100&height=100&seq=15&orientation=squarish" alt="Nguyễn Văn Hùng" class="w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-sm font-medium">Nguyễn Văn Hùng</h3>
+<div class="flex items-center mt-1">
+<div class="flex">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">12/05/2025</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-gray-700">Micro Shure SM7B chất lượng tuyệt vời, âm thanh trong trẻo, thu được đúng chất giọng. Giao hàng nhanh, đóng gói cẩn thận. Rất hài lòng với sản phẩm và dịch vụ!</p>
+</div>
+<div>
+<div class="flex items-start mb-3">
+<div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden mr-3">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20photo%20of%20a%20young%20Vietnamese%20woman%2C%20simple%20neutral%20background%2C%20realistic%2C%20high%20quality&width=100&height=100&seq=16&orientation=squarish" alt="Trần Thị Mai" class="w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-sm font-medium">Trần Thị Mai</h3>
+<div class="flex items-center mt-1">
+<div class="flex">
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-fill text-yellow-400 text-xs"></i>
+<i class="ri-star-half-fill text-yellow-400 text-xs"></i>
+</div>
+<span class="text-xs text-gray-500 ml-2">28/05/2025</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-gray-700">Mua combo thiết bị live stream, chất lượng rất tốt so với giá tiền. Anh chủ shop tư vấn nhiệt tình, hướng dẫn cài đặt chi tiết. Sẽ ủng hộ shop dài lâu!</p>
+</div>
+<div class="mt-4 flex justify-center">
+<button class="text-primary text-sm font-medium cursor-pointer">Xem Thêm Đánh Giá</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Contact Buttons -->
+<div class="fixed right-4 bottom-20 flex flex-col gap-3 z-40">
+<a href="https://zalo.me/0974230718" class="w-12 h-12 rounded-full bg-[#0068FF] flex items-center justify-center shadow-lg cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=Zalo%20app%20logo%2C%20simple%20icon%20design%2C%20white%20color%2C%20centered%20on%20transparent%20background&width=32&height=32&seq=20&orientation=squarish" alt="Zalo" class="w-6 h-6">
+</a>
+<a href="https://www.youtube.com/@Tuongmedia196" class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-lg cursor-pointer">
+<i class="ri-youtube-line ri-lg text-white"></i>
+</a>
+</div>
+<!-- Tab Bar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
+<div class="grid grid-cols-4">
+<a href="#" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-line text-primary"></i>
+</div>
+<span class="text-xs mt-1 text-primary">Trang Chủ</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-apps-line"></i>
+</div>
+<span class="text-xs mt-1 text-gray-600">Danh Mục</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-shopping-cart-2-line"></i>
+</div>
+<span class="text-xs mt-1 text-gray-600">Giỏ Hàng</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-3-line"></i>
+</div>
+<span class="text-xs mt-1 text-gray-600">Tài Khoản</span>
+</a>
+</div>
+</nav>
+<!-- Scripts -->
+<script id="countdownTimer">
+document.addEventListener('DOMContentLoaded', function() {
+// Countdown Timer
+function updateCountdown() {
+const now = new Date();
+const hours = 23 - now.getHours();
+const minutes = 59 - now.getMinutes();
+const seconds = 59 - now.getSeconds();
+const timeBlocks = document.querySelectorAll('.countdown-timer .time-block');
+if (timeBlocks.length >= 3) {
+timeBlocks[0].textContent = hours.toString().padStart(2, '0');
+timeBlocks[1].textContent = minutes.toString().padStart(2, '0');
+timeBlocks[2].textContent = seconds.toString().padStart(2, '0');
+}
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+});
+</script>
+<script id="cartFunctionality">
+document.addEventListener('DOMContentLoaded', function() {
+const addToCartButtons = document.querySelectorAll('.ri-shopping-cart-2-line');
+addToCartButtons.forEach(button => {
+button.closest('button').addEventListener('click', function(e) {
+e.preventDefault();
+const productContainer = this.closest('div').parentElement;
+const productName = productContainer.querySelector('h3').textContent;
+// Create notification
+const notification = document.createElement('div');
+notification.className = 'fixed top-16 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+notification.textContent = `Đã thêm ${productName} vào giỏ hàng`;
+document.body.appendChild(notification);
+// Remove notification after 2 seconds
+setTimeout(() => {
+notification.remove();
+}, 2000);
+});
+});
+});
+</script>
+</body>
+</html>
